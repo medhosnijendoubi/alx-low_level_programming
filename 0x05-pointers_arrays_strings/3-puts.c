@@ -6,11 +6,11 @@
  */
 void _puts(char *str)
 {
-	int i;
+	int j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (j = 0; str[j] != '\0'; j++)
 	{
-		_putchar(str[i]);
+		_putchar(str[j]);
 	}
 	_putchar('\n');
 }
