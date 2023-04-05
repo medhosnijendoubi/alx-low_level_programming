@@ -8,32 +8,32 @@
  */
 int main(void)
 {
-	long int n;
-	long int max;
-	long int i;
+	long int x; 
+	long int m;
+	long int j;
 
-	n = 612852475143;
-	max = -1;
+	x = 612852475143;
+	m = -1;
 
-	while (n % 2 == 0)
+	while (x % 2 == 0)
 	{
-		max = 2;
-		n /= 2;
+		m = 2;
+		x /= 2;
 	}
 
-	for (i = 3; i <= sqrt(n); i = i + 2)
+	for (j = 3; j <= sqrt(x); j = j + 2)
 	{
-		while (n % i == 0)
+		while (x % j == 0)
 		{
-			max = i;
-			n = n / i;
+			max = j;
+			x = x / j;
 		}
 	}
 
-	if (n > 2)
-		max = n;
+	if (x > 2)
+		m = x;
 
-	printf("%ld\n", max);
+	printf("%ld\n", m);
 
 	return (0);
 }
