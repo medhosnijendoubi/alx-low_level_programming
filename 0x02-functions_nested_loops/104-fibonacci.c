@@ -8,33 +8,33 @@
  */
 int main(void)
 {
-	unsigned long int i, j, k, j1, j2, k1, k2;
+	unsigned long int p, l, n, x1, x2, v1, v2;
 
-	j = 1;
-	k = 2;
+	l = 1;
+	n = 2;
 
-	printf("%lu", j);
+	printf("%lu", l);
 
-	for (i = 1; i < 91; i++)
+	for (p = 1; p < 91; p++)
 	{
-		printf(", %lu", k);
-		k = k + j;
-		j = k - j;
+		printf(", %lu", n);
+		n = n + l;
+		l = n - l;
 	}
 
-	j1 = j / 1000000000;
-	j2 = j % 1000000000;
-	k1 = k / 1000000000;
-	k2 = k % 1000000000;
+	x1 = l / 1000000000;
+	x2 = l % 1000000000;
+	v1 = n / 1000000000;
+	v2 = n % 1000000000;
 
-	for (i = 92; i < 99; ++i)
+	for (p = 92; p < 99; ++p)
 	{
-		printf(", %lu", k1 + (k2 / 1000000000));
-		printf("%lu", k2 % 1000000000);
-		k1 = k1 + j1;
-		j1 = k1 - j1;
-		k2 = k2 + j2;
-		j2 = k2 - j2;
+		printf(", %lu", v1 + (v2 / 1000000000));
+		printf("%lu", v2 % 1000000000);
+		v1 = v1 + x1;
+		x1 = v1 - x1;
+		v2 = v2 + x2;
+		x2 = v2 - x2;
 	}
 
 	printf("\n");

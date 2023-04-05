@@ -7,24 +7,24 @@
  */
 int main(void)
 {
-	long int i, j, k, next;
+	long int p, l, n, var;
 
-	j = 1;
+	l = 1;
 
-	k = 2;
+	n = 2;
 
-	for (i = 1; i <= 50; ++i)
+	for (p = 1; p <= 50; ++p)
 	{
-		if (j != 20365011074)
+		if (l != 20365011074)
 		{
-			printf("%ld, ", j);
+			printf("%ld, ", l);
 		} else
 		{
-			printf("%ld\n", j);
+			printf("%ld\n", l);
 		}
-		next = j + k;
-		j = k;
-		k = next;
+		var = l + n;
+		l = n;
+		n = var;
 	}
 
 	return (0);
