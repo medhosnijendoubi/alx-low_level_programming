@@ -6,20 +6,20 @@
  */
 int main(void)
 {
-	int i, j;
+	int k, l;
 
-	for (i = 0; i < 100; i++)
+	for (k = 0; k < 100; k++)
 	{
-		for (j = 0; j < 100; j++)
+		for (l = 0; l < 100; l++)
 		{
-			if (i < j)
+			if (k < l)
 			{
-				putchar((i / 10) + 48);
-				putchar((i % 10) + 48);
+				putchar((k / 10) + 48);
+				putchar((k % 10) + 48);
 				putchar(' ');
-				putchar((j / 10) + 48);
-				putchar((j % 10) + 48);
-				if (i != 98 || j != 99)
+				putchar((l / 10) + 48);
+				putchar((l % 10) + 48);
+				if (k != 98 || l != 99)
 				{
 					putchar(',');
 					putchar(' ');
