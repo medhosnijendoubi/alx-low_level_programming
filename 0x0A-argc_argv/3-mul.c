@@ -9,38 +9,38 @@
  */
 int _atoi(char *s)
 {
-	int j, k, x, test, p, test1;
+	int i, d, n, len, f, digit;
 
-	j = 0;
-	k = 0;
-	x = 0;
-	test = 0;
-	p = 0;
-	test1 = 0;
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
 
-	while (s[test] != '\0')
-		test++;
+	while (s[len] != '\0')
+		len++;
 
-	while (j < test && p == 0)
+	while (i < len && f == 0)
 	{
-		if (s[j] == '-')
-			++k;
+		if (s[i] == '-')
+			++d;
 
-		if (s[j] >= '0' && s[j] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			test1 = s[j] - '0';
-			if (k % 2)
-				test1 = -test1;
-			x = x * 10 + test1;
-			p = 1;
-			if (s[j + 1] < '0' || s[j + 1] > '9')
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
-			p = 0;
+			f = 0;
 		}
-		j++;
+		i++;
 	}
 
-	if (p == 0)
+	if (f == 0)
 		return (0);
 
 	return (n);
@@ -55,7 +55,7 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int n1, n2, n3;
+	int result, num1, num2;
 
 	if (argc < 3 || argc > 3)
 	{
@@ -63,11 +63,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	n2 = _atoi(argv[1]);
-	n3 = _atoi(argv[2]);
-	n1 = n2 * n3;
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
 
-	printf("%d\n", n1);
+	printf("%d\n", result);
 
 	return (0);
 }
