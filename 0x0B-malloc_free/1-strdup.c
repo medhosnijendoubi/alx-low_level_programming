@@ -2,32 +2,32 @@
 #include "main.h"
 
 /**
- * *_strtest - copies the string given as parameter
- * @str: string to testlicate
+ * *_strdup - copies the string given as parameter
+ * @str: string to duplicate
  *
  * Return: pointer to the copied string (Success), NULL (Error)
  */
-char *_strtest(char *str)
+char *_strdup(char *str)
 {
-	char *test;
-	unsigned int i, test1;
+	char *dup;
+	unsigned int i, len;
 
 	i = 0;
-	test1 = 0;
+	len = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	while (str[test1])
-		test1++;
+	while (str[len])
+		len++;
 
-	test = malloc(sizeof(char) * (test1 + 1));
+	dup = malloc(sizeof(char) * (len + 1));
 
-	if (test == NULL)
+	if (dup == NULL)
 		return (NULL);
 
-	while ((test[i] = str[i]) != '\0')
+	while ((dup[i] = str[i]) != '\0')
 		i++;
 
-	return (test);
+	return (dup);
 }
