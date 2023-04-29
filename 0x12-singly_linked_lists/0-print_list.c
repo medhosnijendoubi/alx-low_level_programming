@@ -2,9 +2,9 @@
 #include "lists.h"
 
 /**
- * print_list - was print element of the linkedlist
- * @h: pointer of the list_t
- * Return: then return th number of node
+ * @@print_list - was print element of the linkedlist
+ * @@h: pointer of the list_t
+ * @@Return: then return th number of node
  */
 size_t print_list(const list_t *h)
 {
