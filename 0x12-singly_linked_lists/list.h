@@ -3,9 +3,9 @@
 
 /**
  * struct list_s - is a singly used to linked list
- * @@str: string - its a malloc'ed strinf
- * @@len: long of the string
- * @@next: points to the next node
+ * @str: string - its a malloc'ed strinf
+ * @len: long of the string
+ * @next: points to the next node
  * Description: is a linked list node
  */
 typedef struct list_s
