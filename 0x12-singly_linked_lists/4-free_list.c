@@ -1,6 +1,9 @@
+#include <stdlib.h>
+#include "lists.h"
+
 /**
- * free_list - is a frees to a linkedlist
- * @head: is a  list to bee freed
+ * free_list - frees a linked list
+ * @head: list_t list to be freed
  */
 void free_list(list_t *head)
 {
