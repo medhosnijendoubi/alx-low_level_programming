@@ -294,6 +294,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_entry(head->e_entry, head->e_ident);
 
 	free(head);
-	close_elf(o);
+	close_elf(p);
 	return (0);
 }
